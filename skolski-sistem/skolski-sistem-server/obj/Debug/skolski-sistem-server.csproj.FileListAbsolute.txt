@@ -1,0 +1,9 @@
+/home/nexyy/git-nexylmao/NTP4-Projekat/skolski-sistem/skolski-sistem-server/bin/Debug/skolski_sistem_server.exe
+/home/nexyy/git-nexylmao/NTP4-Projekat/skolski-sistem/skolski-sistem-server/bin/Debug/skolski_sistem_server.pdb
+/home/nexyy/git-nexylmao/NTP4-Projekat/skolski-sistem/skolski-sistem-server/bin/Debug/skolski_sistem_common.dll
+/home/nexyy/git-nexylmao/NTP4-Projekat/skolski-sistem/skolski-sistem-server/bin/Debug/skolski_sistem_common.pdb
+/home/nexyy/git-nexylmao/NTP4-Projekat/skolski-sistem/skolski-sistem-server/obj/Debug/skolski-sistem-server.csprojAssemblyReference.cache
+/home/nexyy/git-nexylmao/NTP4-Projekat/skolski-sistem/skolski-sistem-server/obj/Debug/skolski-sistem-server.csproj.CoreCompileInputs.cache
+/home/nexyy/git-nexylmao/NTP4-Projekat/skolski-sistem/skolski-sistem-server/obj/Debug/skolski-sistem-server.csproj.CopyComplete
+/home/nexyy/git-nexylmao/NTP4-Projekat/skolski-sistem/skolski-sistem-server/obj/Debug/skolski_sistem_server.exe
+/home/nexyy/git-nexylmao/NTP4-Projekat/skolski-sistem/skolski-sistem-server/obj/Debug/skolski_sistem_server.pdb
