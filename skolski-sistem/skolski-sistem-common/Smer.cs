@@ -9,7 +9,11 @@ namespace skolski_sistem_common
         private string naziv;
 
         [DataMember]
-        public int Id => id;
+        public int Id
+        {
+            get => id;
+            set => id = value;
+        }
         [DataMember]
         public string Naziv
         {
@@ -19,6 +23,11 @@ namespace skolski_sistem_common
 
         public Smer()
         {
+        }
+
+        public Smer(string naziv)
+        {
+            this.naziv = naziv;
         }
 
         public Smer(int id, string naziv)

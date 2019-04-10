@@ -17,7 +17,11 @@ namespace skolski_sistem_common
         private int idSkole;
 
         [DataMember]
-        public int Id => id;
+        public int Id
+        {
+            get => id;
+            set => id = value;
+        }
         [DataMember]
         public string Ime
         {
@@ -65,6 +69,19 @@ namespace skolski_sistem_common
 
         public Ucenik(string ime, string prezime, string jmbg, DateTime datumRodjenja, string adresa, string mobilniTelefon, int idSmera, int idSkole)
         {
+            this.ime = ime;
+            this.prezime = prezime;
+            this.jmbg = jmbg;
+            this.datumRodjenja = datumRodjenja;
+            this.adresa = adresa;
+            this.mobilniTelefon = mobilniTelefon;
+            this.idSmera = idSmera;
+            this.idSkole = idSkole;
+        }
+
+        public Ucenik(int id, string ime, string prezime, string jmbg, DateTime datumRodjenja, string adresa, string mobilniTelefon, int idSmera, int idSkole)
+        {
+            this.id = id;
             this.ime = ime;
             this.prezime = prezime;
             this.jmbg = jmbg;

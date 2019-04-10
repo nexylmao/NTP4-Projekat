@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "skolski-sistem-common", "sk
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "skolski-sistem-server", "skolski-sistem-server\skolski-sistem-server.csproj", "{AA9D37EB-781F-410F-BB1C-FE5C997DBDF3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "skolski-sistem-client", "skolski-sistem-client\skolski-sistem-client.csproj", "{D28B5992-B8F7-4305-A054-05CC80E5520B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{AA9D37EB-781F-410F-BB1C-FE5C997DBDF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA9D37EB-781F-410F-BB1C-FE5C997DBDF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA9D37EB-781F-410F-BB1C-FE5C997DBDF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D28B5992-B8F7-4305-A054-05CC80E5520B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D28B5992-B8F7-4305-A054-05CC80E5520B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D28B5992-B8F7-4305-A054-05CC80E5520B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D28B5992-B8F7-4305-A054-05CC80E5520B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

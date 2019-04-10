@@ -19,9 +19,6 @@ namespace skolski_sistem_server
         {
             _sqlConnection = new SqlConnection(ConnectionString);
             _sqlConnection.Open();
-            new SqlCommand(SqlQueries.CreateSkola, _sqlConnection).ExecuteNonQuery();
-            new SqlCommand(SqlQueries.CreateSmer, _sqlConnection).ExecuteNonQuery();
-            new SqlCommand(SqlQueries.CreateUcenik, _sqlConnection).ExecuteNonQuery();
             return _sqlConnection;
         }
 
