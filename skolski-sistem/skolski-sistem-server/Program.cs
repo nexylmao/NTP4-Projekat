@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Data.SqlClient;
+using System.ServiceModel;
+using System.ServiceModel.Description;
 using skolski_sistem_common;
 
 namespace skolski_sistem_server
@@ -8,25 +10,27 @@ namespace skolski_sistem_server
     {
         public static void Main(string[] args)
         {
-            using (var sqlConnection = new SqlConnection(adjustConnectionString()))
+            try
             {
-                sqlConnection.Open();
-                
-                /*
-                 * Creating the Tables (if that is necessary)
-                 */
-                var skolaCreate = new SqlCommand(Skola.SqlQueries.Create, sqlConnection);
-                skolaCreate.ExecuteNonQuery();
-                
-                var smerCreate = new SqlCommand(Smer.SqlQueries.Create, sqlConnection);
-                smerCreate.ExecuteNonQuery();
-                
-                var ucenikCreate = new SqlCommand(Ucenik.SqlQueries.Create, sqlConnection);
-                ucenikCreate.ExecuteNonQuery();
-            }
+                var path = "net.tcp://localhost:5694/api-ss/";
+                var serviceHost = new ServiceHost(typeof(Service));
+                serviceHost.AddServiceEndpoint(typeof(IService), new NetTcpBinding(), new Uri(path));
+                serviceHost.Open();
+                Console.WriteLine("Server up on port 5694");
 
-            Console.WriteLine("Done.");
-            Console.ReadKey();
+                char c;
+                do
+                {
+                    c = Console.ReadKey(true).KeyChar;
+                } while (c != 'x');
+
+                serviceHost.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.ReadKey();
+            }
         }
     }
 }

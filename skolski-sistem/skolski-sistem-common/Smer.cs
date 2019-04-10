@@ -5,16 +5,6 @@ namespace skolski_sistem_common
     [DataContract]
     public class Smer
     {
-        public static class SqlQueries
-        {
-            public static string Create => @"IF NOT EXISTS (SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES
-                WHERE TABLE_NAME = 'Smer')
-                CREATE TABLE SMER(
-                    id INT PRIMARY KEY NOT NULL IDENTITY(1,1),
-                    naziv NVARCHAR(255) NOT NULL
-                );";
-        }
-        
         private int id;
         private string naziv;
 

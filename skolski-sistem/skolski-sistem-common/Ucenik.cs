@@ -6,23 +6,6 @@ namespace skolski_sistem_common
     [DataContract]
     public class Ucenik
     {
-        public static class SqlQueries
-        {
-            public static string Create => @"IF NOT EXISTS (SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES
-                WHERE TABLE_NAME = 'Ucenik')
-                CREATE TABLE UCENIK(
-                    id INT PRIMARY KEY NOT NULL IDENTITY(1,1),
-                    ime NVARCHAR(30) NOT NULL,
-                    prezime NVARCHAR(30) NOT NULL,
-                    jmbg NVARCHAR(13) NOT NULL,
-                    datumRodjenja DATE NOT NULL,
-                    adresa NVARCHAR(255) NOT NULL,
-                    mobilniTelefon NVARCHAR(15) NOT NULL,
-                    idSmera INT FOREIGN KEY REFERENCES SMER(id),
-                    idSkole INT FOREIGN KEY REFERENCES SKOLA(id)    
-                );";
-        }
-        
         private int id;
         private string ime;
         private string prezime;

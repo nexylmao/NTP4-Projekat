@@ -13,20 +13,21 @@ namespace skolski_sistem_server
             connectionString.Replace("{your_username}", Environment.GetEnvironmentVariable("db_username"))
                 .Replace("{your_password}", Environment.GetEnvironmentVariable("db_password"));
 
-        private SqlConnection sqlConnection;
+        private SqlConnection _sqlConnection;
 
         public SqlConnection Init()
         {
-            sqlConnection = new SqlConnection(ConnectionString);
-            (new SqlCommand(Skola.SqlQueries.Create, sqlConnection)).ExecuteNonQuery();
-            (new SqlCommand(Smer.SqlQueries.Create, sqlConnection)).ExecuteNonQuery();
-            (new SqlCommand(Ucenik.SqlQueries.Create, sqlConnection)).ExecuteNonQuery();
-            return sqlConnection;
+            _sqlConnection = new SqlConnection(ConnectionString);
+            _sqlConnection.Open();
+            new SqlCommand(SqlQueries.CreateSkola, _sqlConnection).ExecuteNonQuery();
+            new SqlCommand(SqlQueries.CreateSmer, _sqlConnection).ExecuteNonQuery();
+            new SqlCommand(SqlQueries.CreateUcenik, _sqlConnection).ExecuteNonQuery();
+            return _sqlConnection;
         }
 
         public void Dispose()
         {
-            sqlConnection?.Dispose();
+            _sqlConnection?.Dispose();
         }
     }
 }
