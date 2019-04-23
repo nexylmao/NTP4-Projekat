@@ -4,11 +4,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("skolski_sistem_client")]
+[assembly: AssemblyTitle("SkolskiSistemCommon")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("skolski_sistem_client")]
+[assembly: AssemblyProduct("SkolskiSistemCommon")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -19,7 +19,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("D28B5992-B8F7-4305-A054-05CC80E5520B")]
+[assembly: Guid("A900D019-1693-4335-B0BD-5EDE8D6D2DC7")]
 
 // Version information for an assembly consists of the following four values:
 //
