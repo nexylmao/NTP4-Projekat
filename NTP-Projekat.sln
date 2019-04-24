@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkolskiSistemCommon", "SkolskiSistemCommon\SkolskiSistemCommon.csproj", "{A900D019-1693-4335-B0BD-5EDE8D6D2DC7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkolskiSistemServer", "SkolskiSistemServer\SkolskiSistemServer.csproj", "{9AF1124D-5606-47FE-980B-E224BC7F066B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkolskiSistemClient", "SkolskiSistemClient\SkolskiSistemClient.csproj", "{20235E14-EACA-48A4-8351-CB29B8441C76}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{A900D019-1693-4335-B0BD-5EDE8D6D2DC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A900D019-1693-4335-B0BD-5EDE8D6D2DC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A900D019-1693-4335-B0BD-5EDE8D6D2DC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AF1124D-5606-47FE-980B-E224BC7F066B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AF1124D-5606-47FE-980B-E224BC7F066B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AF1124D-5606-47FE-980B-E224BC7F066B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AF1124D-5606-47FE-980B-E224BC7F066B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20235E14-EACA-48A4-8351-CB29B8441C76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20235E14-EACA-48A4-8351-CB29B8441C76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20235E14-EACA-48A4-8351-CB29B8441C76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20235E14-EACA-48A4-8351-CB29B8441C76}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
