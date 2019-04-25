@@ -42,7 +42,7 @@ namespace SkolskiSistemClient
                         SmerInterface.Initialize(methods, ref smerPointer);
                         break;
                     case 'c':
-                        UcenikInterface.Initialize(methods, skolaPointer, smerPointer, ucenikPointer);
+                        UcenikInterface.Initialize(methods, ref skolaPointer, ref smerPointer, ref ucenikPointer);
                         break;
                     case 'd':
                         if (skolaPointer == null)
