@@ -23,10 +23,12 @@ namespace SkolskiSistemCommon
 
         public Smer()
         {
+            id = int.MinValue;
         }
 
         public Smer(string naziv)
         {
+            id = int.MinValue;
             this.naziv = naziv;
         }
 

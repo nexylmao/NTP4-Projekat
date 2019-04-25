@@ -1,3 +1,4 @@
+using System;
 using System.Runtime.Serialization;
 
 namespace SkolskiSistemCommon
@@ -44,10 +45,12 @@ namespace SkolskiSistemCommon
 
         public Skola()
         {
+            id = int.MinValue;
         }
 
         public Skola(string naziv, string adresa, string telefon, string email)
         {
+            id = Int32.MinValue;
             this.naziv = naziv;
             this.adresa = adresa;
             this.telefon = telefon;

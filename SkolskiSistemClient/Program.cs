@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Globalization;
+using System.Linq.Expressions;
 using System.ServiceModel;
 using SkolskiSistemCommon;
 using Newtonsoft.Json;
@@ -15,8 +17,13 @@ namespace SkolskiSistemClient
             try
             {
                 Console.WriteLine(JsonConvert.SerializeObject(proxy.GetSkole()));
-                Console.WriteLine(JsonConvert.SerializeObject(proxy.GetSkola(0)));
-                Console.WriteLine(JsonConvert.SerializeObject(proxy.GetSkola(1)));
+                Console.WriteLine(JsonConvert.SerializeObject(proxy.GetSmerovi()));
+                Console.WriteLine(JsonConvert.SerializeObject(proxy.GetUcenici()));
+
+                var ucenik = proxy.GetUcenik(7);
+                Console.WriteLine(JsonConvert.SerializeObject(ucenik));
+                ucenik.DatumRodjenja = new DateTime(2000, 8, 19);
+                Console.WriteLine("Rows updated {0}.", proxy.PutUcenik(ucenik));
             }
             catch (FaultException<Komunizam> ex)
             {

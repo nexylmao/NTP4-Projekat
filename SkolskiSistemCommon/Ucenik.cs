@@ -59,16 +59,26 @@ namespace SkolskiSistemCommon
             set => mobilniTelefon = value;
         }
         [DataMember]
-        public int IdSmera => idSmera;
+        public int IdSkole
+        {
+            get => idSkole;
+            set => idSkole = value;
+        }
         [DataMember]
-        public int IdSkole => idSkole;
+        public int IdSmera
+        {
+            get => idSmera;
+            set => idSmera = value;
+        }
 
         public Ucenik()
         {
+            id = int.MinValue;
         }
 
         public Ucenik(string ime, string prezime, string jmbg, DateTime datumRodjenja, string adresa, string mobilniTelefon, int idSmera, int idSkole)
         {
+            id = int.MinValue;
             this.ime = ime;
             this.prezime = prezime;
             this.jmbg = jmbg;
