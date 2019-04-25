@@ -11,19 +11,11 @@ namespace SkolskiSistemClient
     {
         public static void Main(string[] args)
         {
-            var channelFactory = new ChannelFactory<IService>(new NetTcpBinding(), new EndpointAddress("net.tcp://localhost:8000/"));
-            var proxy = channelFactory.CreateChannel();
-
             try
             {
-                Console.WriteLine(JsonConvert.SerializeObject(proxy.GetSkole()));
-                Console.WriteLine(JsonConvert.SerializeObject(proxy.GetSmerovi()));
-                Console.WriteLine(JsonConvert.SerializeObject(proxy.GetUcenici()));
-
-                var ucenik = proxy.GetUcenik(7);
-                Console.WriteLine(JsonConvert.SerializeObject(ucenik));
-                ucenik.DatumRodjenja = new DateTime(2000, 8, 19);
-                Console.WriteLine("Rows updated {0}.", proxy.PutUcenik(ucenik));
+                var channelFactory = new ChannelFactory<IService>(new NetTcpBinding(), new EndpointAddress("net.tcp://localhost:8000/"));
+                var proxy = channelFactory.CreateChannel();
+                Interface.Initialize(proxy);
             }
             catch (FaultException<Komunizam> ex)
             {
